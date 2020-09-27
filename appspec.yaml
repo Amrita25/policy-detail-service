@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:143831952087:task-definition/aws-policy-detail-service:2"
+        LoadBalancerInfo:
+          ContainerName: "policy-detail-service"
+          ContainerPort: "8087"
+        PlatformVersion: "LATEST"
